@@ -13,3 +13,11 @@ A small beginner game project made with Godot.
 
 ## Status
 In development 🚧
+
+## Current Progress
+✅ Basic movement  
+✅ Camera follow  
+✅ Wall collision  
+✅ Interaction system  
+⬜ Dialogue system  
+⬜ Small playable map
