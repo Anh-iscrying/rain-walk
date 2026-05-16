@@ -2,9 +2,16 @@
 
 [ext_resource type="Script" uid="uid://debl4qqw72lyo" path="res://player.gd" id="1_0xm2m"]
 [ext_resource type="Texture2D" uid="uid://tgcn7xvfnneo" path="res://icon.svg" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://uc7kjakgmct2" path="res://interactable.gd" id="3_h2yge"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0xm2m"]
 size = Vector2(155, 148)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h2yge"]
+size = Vector2(1962, 30)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1bvp3"]
+size = Vector2(251, 198)
 
 [node name="Node2D" type="Node2D" unique_id=1453186736]
 
@@ -20,3 +27,40 @@ texture = ExtResource("1_ig7tw")
 position = Vector2(15.5, 11)
 shape = SubResource("RectangleShape2D_0xm2m")
 debug_color = Color(0.877061, 0.33843914, 0.14402708, 0.41960785)
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1971528175]
+
+[node name="Wall" type="StaticBody2D" parent="." unique_id=417481692]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall" unique_id=1270932363]
+position = Vector2(-6, 115)
+shape = SubResource("RectangleShape2D_h2yge")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=830668237]
+offset_left = -978.0
+offset_top = 101.0
+offset_right = 974.0
+offset_bottom = 130.0
+color = Color(0.8702691, 0.1023814, 0.13718572, 1)
+
+[node name="Interactable" type="Area2D" parent="." unique_id=1980060579]
+script = ExtResource("3_h2yge")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable" unique_id=441491634]
+position = Vector2(305.5, -4)
+shape = SubResource("RectangleShape2D_1bvp3")
+
+[node name="Sprite2D" type="Sprite2D" parent="Interactable" unique_id=2130071313]
+position = Vector2(511, -2)
+texture = ExtResource("1_ig7tw")
+
+[node name="MessageLabel" type="Label" parent="." unique_id=843880626]
+visible = false
+offset_left = 24.0
+offset_top = -106.0
+offset_right = 77.0
+offset_bottom = -78.0
+text = "Hello"
+
+[connection signal="body_entered" from="Interactable" to="Interactable" method="_on_body_entered"]
+[connection signal="body_exited" from="Interactable" to="Interactable" method="_on_body_exited"]

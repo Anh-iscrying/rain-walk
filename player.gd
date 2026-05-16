@@ -19,3 +19,7 @@ func _physics_process(delta):
 
 	velocity = direction.normalized() * SPEED
 	move_and_slide()
+
+
+func _on_interactable_body_entered(body: Node2D) -> void:
+	pass # Replace with function body.
