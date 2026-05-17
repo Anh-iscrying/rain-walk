@@ -19,5 +19,5 @@ In development 🚧
 ✅ Camera follow  
 ✅ Wall collision  
 ✅ Interaction system  
-⬜ Dialogue system  
-⬜ Small playable map
+✅ Dialogue system  
+✅ Small playable map
