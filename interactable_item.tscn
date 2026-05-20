@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://dghyoix4tdnyg"]
+
+[ext_resource type="Script" uid="uid://uc7kjakgmct2" path="res://interactable.gd" id="1_h64jf"]
+[ext_resource type="Texture2D" uid="uid://dqyvlelxemga0" path="res://TX Props.png" id="2_wo7e3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5vw27"]
+radius = 41.01219
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h64jf"]
+size = Vector2(56, 13)
+
+[node name="Interactable" type="Area2D" unique_id=897224930]
+script = ExtResource("1_h64jf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1580211841]
+shape = SubResource("CircleShape2D_5vw27")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1101045833]
+z_index = -1
+texture = ExtResource("2_wo7e3")
+region_enabled = true
+region_rect = Rect2(352, 268, 96, 74.30908)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=63033278]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1350090989]
+position = Vector2(-1, 27.5)
+shape = SubResource("RectangleShape2D_h64jf")
+disabled = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
