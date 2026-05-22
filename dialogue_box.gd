@@ -15,6 +15,8 @@ func show_message(text: String):
 	is_active = true
 	text_label.text = text
 	
+	$AudioPlayer.play()
+	
 	# Hiệu ứng chữ chạy từ từ (Typewriter)
 	text_label.visible_ratio = 0
 	var tween = create_tween()

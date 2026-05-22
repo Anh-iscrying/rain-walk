@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://d0v4uirmrilds"]
 
 [ext_resource type="Script" uid="uid://d3ieii2nhb1n4" path="res://dialogue_box.gd" id="1_senjy"]
+[ext_resource type="AudioStream" uid="uid://cfdft7ef3fupt" path="res://click-1.wav" id="2_n23yb"]
 
 [node name="DialogueBox" type="CanvasLayer" unique_id=1317387879]
 script = ExtResource("1_senjy")
@@ -28,3 +29,6 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="TypeTimer" type="Timer" parent="." unique_id=1575294381]
+
+[node name="AudioPlayer" type="AudioStreamPlayer2D" parent="." unique_id=1543936802]
+stream = ExtResource("2_n23yb")
