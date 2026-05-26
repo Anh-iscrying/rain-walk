@@ -21,9 +21,9 @@ A small beginner game project made with Godot.
 In development 🚧
 
 ## Current Progress
-- ✅ Basic movement & Polish animation
-- ✅ Camera follow
-- ✅ Wall collision (TileMap Physics)
+✅ Basic movement & Polish animation
+✅ Camera follow
+✅ Wall collision (TileMap Physics)
 - ✅ Interaction system (Reusable Scenes)
 - ✅ Dialogue system (Singleton/Autoload)
 - ✅ Multiple playable maps (Forest & Indoor)
