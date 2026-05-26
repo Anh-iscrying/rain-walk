@@ -1,6 +1,7 @@
+
 extends CharacterBody2D
 
-@export var speed = 300
+@export var speed = 500
 @onready var sprite = $Sprite2D
 
 func _physics_process(delta):
